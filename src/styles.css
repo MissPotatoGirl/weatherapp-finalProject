@@ -2,20 +2,36 @@ h1 {
   font-family: "Montserrat", sans-serif;
 }
 
+.container{
+  margin: 32px 0;
+}
+
+.currentWrapper{
+  padding: 0 20px;
+}
 .currentTempWrapper{
   display: flex;
   align-items: center;
 
+}
+.currentTemp{
+  padding-left: 8px;
 }
 .currentTemp.icon{
   font-size: 60px;
 }
 .currentTemp.temp{
   font-size: 34px;
+  font-weight: 300;
+  color: #c60000;
 }
 .currentInfoList{
   font-family: "Montserrat", sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.feelsLike{
+  color: #c60000;
 }
