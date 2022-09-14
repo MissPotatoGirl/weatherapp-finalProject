@@ -1,5 +1,9 @@
 function displayTemperature(response){
     console.log(response.data);
+
+    let cityName = response.data.name;
+    let cityNameElement = document.querySelector(".cityName");
+    cityNameElement.innerHTML = `${cityName}`;
     
     let description = response.data.weather[0].description;
     let descriptionElement = document.querySelector(".weatherDescription");
@@ -47,10 +51,6 @@ function displayTimeStamp(){
     let hour = now.getHours();
     let minutes = now.getMinutes();
     let time = `${hour}.${minutes}`;
-
-    console.log(day)
-    console.log(time)
-    console.log(minutes)
 
     let timeStap = `${day} ${time}`;
     let timeStapElement = document.querySelector(".timestamp");
