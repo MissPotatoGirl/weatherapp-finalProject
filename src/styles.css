@@ -4,25 +4,39 @@ h1 {
 
 .container{
   margin: 32px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.uppercase{
+text-transform: uppercase;
+font-size: 12px;
+}
+
+.weatherWrapper{
+  display: flex;
+  align-items: center;
+  
+  padding: 24px 0;
 }
 
 .currentWrapper{
-  padding: 0 20px;
+  padding: 12px 20px;
 }
-.currentTempWrapper{
+.focusTempWrapper{
   display: flex;
   align-items: center;
-
 }
-.currentTemp{
+
+.focusTemp{
   padding-left: 8px;
 }
-.currentTemp.icon{
+.focusTemp.icon{
   font-size: 60px;
 }
-.currentTemp.temp{
+.focusTemp.temp{
   font-size: 34px;
-  font-weight: 300;
+  font-weight: 400;
   color: #c60000;
 }
 .currentInfoList{
