@@ -1,3 +1,21 @@
 h1 {
   font-family: "Montserrat", sans-serif;
 }
+
+.currentTempWrapper{
+  display: flex;
+  align-items: center;
+
+}
+.currentTemp.icon{
+  font-size: 60px;
+}
+.currentTemp.temp{
+  font-size: 34px;
+}
+.currentInfoList{
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
