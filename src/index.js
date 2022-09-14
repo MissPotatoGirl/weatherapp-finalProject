@@ -1,4 +1,29 @@
-function displayTemperature(response){
+function displayPlaceholder(){
+
+    let apiKey = "7fa08a5cce73b5c1c5b2cb4406f7781a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Oslo&appid=${apiKey}&units=metric`;
+    
+    axios.get(apiUrl).then(getInfo);
+}
+
+function searchCity(event) {
+    event.preventDefault();
+    getCityName();
+  }
+  
+  function getCityName(position) {
+    let searchInput = document.querySelector("#search-input");
+    let searchCity = document.querySelector(".cityName");
+    searchCity.innerHTML = searchInput.value;
+    searchCity = searchInput.value;
+  
+    let apiKey = "7fa08a5cce73b5c1c5b2cb4406f7781a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=metric&appid=${apiKey}`;
+  
+    axios.get(apiUrl).then(getInfo);
+  }
+
+function getInfo(response){
     console.log(response.data);
 
     let cityName = response.data.name;
@@ -35,11 +60,6 @@ function displayTemperature(response){
     windElement.innerHTML = `🍃 ${wind} m/s`;
 }
 
-let apiKey = "7fa08a5cce73b5c1c5b2cb4406f7781a";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Oslo&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayTemperature);
-
 
 function displayTimeStamp(){
     let now = new Date();
@@ -58,3 +78,7 @@ function displayTimeStamp(){
 }
 
 displayTimeStamp();
+displayPlaceholder();
+
+let searchButton = document.querySelector("#search-city");
+searchButton.addEventListener("click", searchCity);
