@@ -57,38 +57,32 @@ function getCurrentLocation(position) {
 function getInfo(response){
     //console.log(response.data);
 
-    let cityName = response.data.name;
+    
     let cityNameElement = document.querySelector(".cityName");
-    cityNameElement.innerHTML = `${cityName}`;
-    
-    let description = response.data.weather[0].description;
     let descriptionElement = document.querySelector(".weatherDescription");
-    descriptionElement.innerHTML = description;
-    
-    let focusTeperature = Math.round(response.data.main.temp);
+    let iconElement = document.querySelector("#icon");
     let focusTeperatureElement = document.querySelector(".focusTemp.temp");
-    focusTeperatureElement.innerHTML = `${focusTeperature}º`;
-
-    let feelsLike = Math.round(response.data.main.feels_like);
     let feelsLikeElement = document.querySelector(".feelsLike");
-    feelsLikeElement.innerHTML = `${feelsLike}º`;
-
+    let windElement = document.querySelector(".wind");
+    
+    cityNameElement.innerHTML = response.data.name;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    focusTeperatureElement.innerHTML = `${Math.round(response.data.main.temp)}º`;
+    iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
+    feelsLikeElement.innerHTML = `${Math.round(response.data.main.feels_like)}º`;
+    windElement.innerHTML = `🍃 ${Math.round(response.data.wind.speed)} m/s`;
+    
     if (
         response.data.weather[0].main === "Rain" ||
         response.data.weather[0].main === "Drizzle"
       ) {
-        let rain = response.data.rain["1h"];
         rainElement = document.querySelector(".rain");
-        rainElement.innerHTML = `☔️ ${rain} mm`;
+        rainElement.innerHTML = `☔️ ${response.data.rain["1h"]} mm`;
       } else {
-        let rain = "0";
         rainElement = document.querySelector(".rain");
-        rainElement.innerHTML = `☔️ ${rain} mm`;
+        rainElement.innerHTML = `☔️ 0 mm`;
       }
-    
-    let wind = Math.round(response.data.wind.speed);
-    let windElement = document.querySelector(".wind");
-    windElement.innerHTML = `🍃 ${wind} m/s`;
+   
 }
 
 
