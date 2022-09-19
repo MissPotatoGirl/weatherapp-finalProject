@@ -1,6 +1,15 @@
+
+body{
+  max-width: 700px;
+}
+
+footer{
+  padding: 9px 32px;
+}
+
 .container{
-  margin: 32px 0;
   font-family: "Montserrat", sans-serif;
+  margin: 32px auto;
 }
 
 /* */
@@ -11,7 +20,7 @@ font-size: 10px;
 
 /* Section that shows the searched city and weather*/
 .currentWrapper{
-  padding: 12px 20px;
+  padding: 0px 20px;
 }
 
 /*Temperature in selected city */
@@ -56,4 +65,15 @@ font-size: 10px;
 
 .btn{
   margin-right: 8px;
+}
+
+
+ .focusTempWrapper .active {
+   color: rgb(33, 37, 41);
+   cursor: default;
+   text-decoration: none;
+}
+
+ .focusTempWrapper .active:hover {
+ text-decoration: none;
 }

@@ -47,14 +47,17 @@
         </div>
       </nav>
 <div class="currentWrapper">
-  <h1 class="cityName">City Name</h1>
-    <div class="timestamp uppercase">Friday 13.37</div>
+  <h1 class="cityName">Oslo</h1>
+    <div class="timestamp small">Friday 13.37</div>
     <div class="weatherDescription uppercase">Clear</div>
   <div class="row weatherWrapper">
     <div class="col-6 focusTempWrapper">
       <span class="focusTemp icon"><img src="" alt="Clear" id="icon"></span>
       <span class="focusTemp temp">19ºC</span>
-      <span class="units uppercase">ºC | <a href="#">ºF</a></span>
+      <span class="units uppercase">
+        <a href="#" id="celsius-link" class="active">ºC</a> 
+        |
+        <a href="#" id="fahrenheit-link">ºF</a></span>
     </div>
     <div class="col-6">
       <ul class="currentInfoList">
@@ -65,7 +68,7 @@
     </div>
   </div>
 </div>
-<footer class="uppercase"><a href="https://github.com/MissPotatoGirl/my-first-weather-app" target="_blank">Open-source code</a>  by Olivia Dahlen</footer>
+<footer class="uppercase fixed-bottom"><a href="https://github.com/MissPotatoGirl/my-first-weather-app" target="_blank">Open-source code</a>  by Olivia Dahlen</footer>
 </div>
     <script src="src/index.js"></script>
     <script
