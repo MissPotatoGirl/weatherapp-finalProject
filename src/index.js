@@ -55,7 +55,7 @@ function getCurrentLocation(position) {
   }
 
 function getInfo(response){
-    //console.log(response.data);
+    console.log(response.data);
 
     
     let cityNameElement = document.querySelector(".cityName");
@@ -68,7 +68,8 @@ function getInfo(response){
     cityNameElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     focusTeperatureElement.innerHTML = `${Math.round(response.data.main.temp)}º`;
-    iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
+    iconElement.setAttribute(`src`, `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute(`alt`, response.data.weather[0].description;
     feelsLikeElement.innerHTML = `${Math.round(response.data.main.feels_like)}º`;
     windElement.innerHTML = `🍃 ${Math.round(response.data.wind.speed)} m/s`;
     
