@@ -18,22 +18,22 @@ li.info-item {
   margin-left: 8px;
 }
 
-.weather-forcast {
+.weather-forecast {
   margin-top: 32px;
   text-align: center;
   color: #212529;
 }
 
-.weather-forcast-date {
+.weather-forecast-date {
   font-size: 16px;
   opacity: 0.5;
 }
 
-.weather-forcast-temperature {
+.weather-forecast-temperature {
   font-size: 13px;
 }
 
-.weather-forcast-temperature-min {
+.weather-forecast-temperature-min {
   opacity: 0.5;
 }
 /* text decorations*/
