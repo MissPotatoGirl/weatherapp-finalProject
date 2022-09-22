@@ -1,75 +1,43 @@
-
-footer{
-  padding: 9px 32px;
+ul {
+  list-style-type: none;
+}
+li.infoItem {
+  margin-bottom: 8px;
 }
 
-.container{
+.container {
   font-family: "Montserrat", sans-serif;
+  margin: 64px auto;
+}
+
+.row {
   margin: 32px auto;
 }
 
-/* */
-.uppercase{
-text-transform: uppercase;
-font-size: 10px;
+.btn.position {
+  margin-left: 8px;
 }
 
-/* Section that shows the searched city and weather*/
-.currentWrapper{
-  padding: 0px 20px;
+/* text decorations*/
+.focusTemp {
+  font-size: xx-large;
 }
 
-/*Temperature in selected city */
-.weatherWrapper{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-  padding: 24px 0;
-}
-
-/* Main temparature*/
-.focusTempWrapper{
-  display: flex;
-  align-items: center;
-}
-
-.focusTemp{
-  padding-right: 8px;
-}
-.focusTemp.icon{
-  font-size: 60px;
-}
-
-.focusTemp.temp{
-  font-size: 34px;
-  font-weight: 400;
+.red {
   color: #c60000;
 }
 
-/* Extra information about the weather*/
-.currentInfoList{
-  font-family: "Montserrat", sans-serif;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.uppercase {
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
-.feelsLike{
-  color: #c60000;
+.active {
+  color: rgb(33, 37, 41);
+  text-decoration: none;
+  cursor: default;
 }
 
-.btn{
-  margin-right: 8px;
-}
-
-
- .focusTempWrapper .active {
-   color: rgb(33, 37, 41);
-   cursor: default;
-   text-decoration: none;
-}
-
- .focusTempWrapper .active:hover {
- text-decoration: none;
+.active:hover {
+  text-decoration: none;
 }

@@ -30,7 +30,7 @@
     <title>Weather 🌦</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container justify-content-sm-center">
       <div class="row">
         <div class="col-4">
           <h1 class="cityName">Oslo</h1>
@@ -52,7 +52,7 @@
                   🔍
                 </button>
                 <button
-                  class="btn btn-light"
+                  class="btn btn-light position"
                   id="current-position"
                   type="submit"
                 >
@@ -63,42 +63,40 @@
           </nav>
         </div>
       </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-6 focusTemp">
-      <span class= focusTemp icon">
-        <img src="" alt="Clear" id="icon" />
-      </span>
-      <span class="focusTemp temp">19 ºC</span>
-      <span class="units uppercase">
-        <a href="#" id="celsius-link" class="active">ºC</a>
-        |
-        <a href="#" id="fahrenheit-link">ºF</a>
-      </span>
+      <div class="row">
+        <div class="col-6 focusTemp">
+          <span class= focusTemp icon">
+            <img src="" alt="" id="icon" />
+          </span>
+          <span class="focusTemp temp red">19 ºC</span>
+          <span class="units uppercase">
+            <a href="#" id="celsius-link" class="active">ºC</a>
+            |
+            <a href="#" id="fahrenheit-link">ºF</a>
+          </span>
+        </div>
+        
+        <div class="col-6">
+          <ul class="infoList">
+            <li class="infoItem">
+              🌡 feels like <span class="feelsLike red">19º</span>
+            </li>
+            <li class="infoItem rain"></li>
+            <li class="infoItem wind"></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    
-    <div class="col-6">
-      <ul class="infoList">
-        <li class="item">
-          🌡 feels like <span class="feelsLike">19º</span>
-        </li>
-        <li class="rain"></li>
-        <li class="wind"></li>
-      </ul>
-    </div>
-  </div>
-</div>
   
-  <footer class="uppercase fixed-bottom">
-    <a
-    href="https://github.com/MissPotatoGirl/my-first-weather-app"
-    target="_blank"
-          >Open-source code</a
-        >
-        by Olivia Dahlen
-      </footer>
+    <footer class="uppercase fixed-bottom">
+      <a
+      href="https://github.com/MissPotatoGirl/my-first-weather-app"
+      target="_blank"
+            >Open-source code</a
+          >
+          by Olivia Dahlen
+    </footer>
 
     <script src="src/index.js"></script>
     <script
