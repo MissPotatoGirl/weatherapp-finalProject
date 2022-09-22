@@ -1,7 +1,7 @@
 ul {
   list-style-type: none;
 }
-li.infoItem {
+li.info-item {
   margin-bottom: 8px;
 }
 
@@ -18,6 +18,24 @@ li.infoItem {
   margin-left: 8px;
 }
 
+.weather-forcast {
+  margin-top: 32px;
+  text-align: center;
+  color: #212529;
+}
+
+.weather-forcast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forcast-temperature {
+  font-size: 13px;
+}
+
+.weather-forcast-temperature-min {
+  opacity: 0.5;
+}
 /* text decorations*/
 .focusTemp {
   font-size: xx-large;
