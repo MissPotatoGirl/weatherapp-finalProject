@@ -24,8 +24,8 @@
       rel="stylesheet"
     />
 
-       <!-- Axios -->
-       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Weather Application</title>
   </head>
@@ -41,35 +41,51 @@
               aria-label="Search"
               id="search-input"
             />
-            <button class="btn btn-light" id="search-city" type="submit">🔍</button>
-            <button class="btn btn-light" id="current-position" type="submit">📍</button>
+            <button class="btn btn-light" id="search-city" type="submit">
+              🔍
+            </button>
+            <button class="btn btn-light" id="current-position" type="submit">
+              📍
+            </button>
           </form>
         </div>
       </nav>
-<div class="currentWrapper">
-  <h1 class="cityName">Oslo</h1>
-    <div class="timestamp small">Friday 13.37</div>
-    <div class="weatherDescription uppercase">Clear</div>
-  <div class="row weatherWrapper">
-    <div class="col-6 focusTempWrapper">
-      <span class="focusTemp icon"><img src="" alt="Clear" id="icon"></span>
-      <span class="focusTemp temp">19ºC</span>
-      <span class="units uppercase">
-        <a href="#" id="celsius-link" class="active">ºC</a> 
-        |
-        <a href="#" id="fahrenheit-link">ºF</a></span>
+      <div class="currentWrapper">
+        <h1 class="cityName">Oslo</h1>
+        <div class="timestamp small">Friday 13.37</div>
+        <div class="weatherDescription uppercase">Clear</div>
+        <div class="row weatherWrapper">
+          <div class="col-6 focusTempWrapper">
+            <span class="focusTemp icon"
+              ><img src="" alt="Clear" id="icon"
+            /></span>
+            <span class="focusTemp temp">19ºC</span>
+            <span class="units uppercase">
+              <a href="#" id="celsius-link" class="active">ºC</a>
+              |
+              <a href="#" id="fahrenheit-link">ºF</a></span
+            >
+          </div>
+          <div class="col-6">
+            <ul class="currentInfoList">
+              <li class="currentInfoListItem">
+                🌡 feels like <span class="feelsLike">19º</span>
+              </li>
+              <li class="currentInfoListItem rain">☔️ 0 mm</li>
+              <li class="currentInfoListItem wind">🍃 4 m/s</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer class="uppercase fixed-bottom">
+        <a
+          href="https://github.com/MissPotatoGirl/my-first-weather-app"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Olivia Dahlen
+      </footer>
     </div>
-    <div class="col-6">
-      <ul class="currentInfoList">
-        <li class="currentInfoListItem">🌡 feels like <span class="feelsLike">19º</span></li>
-        <li class="currentInfoListItem rain">☔️ 0 mm</li>
-        <li class="currentInfoListItem wind">🍃 4 m/s</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<footer class="uppercase fixed-bottom"><a href="https://github.com/MissPotatoGirl/my-first-weather-app" target="_blank">Open-source code</a>  by Olivia Dahlen</footer>
-</div>
     <script src="src/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
