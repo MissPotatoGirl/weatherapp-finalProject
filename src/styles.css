@@ -5,6 +5,9 @@ li.info-item {
   margin-bottom: 8px;
 }
 
+footer {
+  margin: 16px;
+}
 .container {
   font-family: "Montserrat", sans-serif;
   margin: 64px auto;
