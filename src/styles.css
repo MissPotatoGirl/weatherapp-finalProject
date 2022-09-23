@@ -42,7 +42,12 @@ footer {
 }
 /* text decorations*/
 .focusTemp {
-  font-size: xx-large;
+  font-size: 64px;
+  text-align: end;
+}
+
+.units {
+  vertical-align: text-top;
 }
 
 .red {
