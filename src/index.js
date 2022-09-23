@@ -65,8 +65,10 @@ function getCurrentLocation(position) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = `311f1f45fee82242ab4086372ab360f5`;
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
+
+  displaForcast();
 }
 
 function getInfo(response) {
@@ -107,7 +109,7 @@ function getInfo(response) {
 function displaForcast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
@@ -168,4 +170,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelciusTemperature);
 
 displayPlaceholder();
-displaForcast();

@@ -7,6 +7,7 @@ li.info-item {
 
 footer {
   margin: 16px;
+  text-align: end;
 }
 .container {
   font-family: "Montserrat", sans-serif;
@@ -22,7 +23,7 @@ footer {
 }
 
 .weather-forecast {
-  margin-top: 32px;
+  margin-top: 64px;
   text-align: center;
   color: #212529;
 }
