@@ -62,6 +62,13 @@ function getCurrentLocation(position) {
   axios.get(apiUrl).then(getInfo);
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `311f1f45fee82242ab4086372ab360f5`;
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  console.log(apiUrl);
+}
+
 function getInfo(response) {
   let cityNameElement = document.querySelector(".cityName");
   let descriptionElement = document.querySelector(".weatherDescription");
@@ -93,6 +100,8 @@ function getInfo(response) {
     rainElement = document.querySelector(".rain");
     rainElement.innerHTML = `☔️ 0 mm`;
   }
+
+  getForecast(response.data.coord);
 }
 
 function displaForcast() {
