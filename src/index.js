@@ -144,27 +144,6 @@ function displaForcast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-
-  let focusTeperatureElement = document.querySelector(".focusTemp.temp");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  focusTeperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}º`;
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-function displayCelciusTemperature(event) {
-  event.preventDefault();
-
-  let focusTeperatureElement = document.querySelector(".focusTemp.temp");
-  focusTeperatureElement.innerHTML = `${Math.round(celsiusTemperature)}º`;
-
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
-
 let celsiusTemperature = null;
 
 let searchButton = document.querySelector("#search-city");
@@ -172,11 +151,5 @@ searchButton.addEventListener("click", searchCity);
 
 let currentLocationButton = document.querySelector("#current-position");
 currentLocationButton.addEventListener("click", displayCurrentLocation);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelciusTemperature);
 
 displayPlaceholder();
